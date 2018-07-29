@@ -8,6 +8,6 @@ public class UssdController {
 
     @RequestMapping(value="", method=RequestMethod.POST)
     public String message(@RequestBody UssdRequest ussdRequest) {
-        return "Hello";
+        return "CON Hello";
     }
 }
