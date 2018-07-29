@@ -1,16 +1,13 @@
 package com.akinmail.blockchain.immunostandussd;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/ussd")
 public class UssdController {
 
-    @GetMapping()
-    public String getAll() {
+    @RequestMapping(value="", method=RequestMethod.POST)
+    public String message(@RequestBody UssdRequest ussdRequest) {
         return "Hello";
     }
 }
